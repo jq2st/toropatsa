@@ -1,7 +1,243 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@font-face {
+	font-family: 'GM';
+	src:url('src/assets/fonts/GM.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'CSR';
+	src:url('src/assets/fonts/CSR.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
+}
+.content {
+	margin: 0 auto;
+	width: 1100px;
+}
+@media (max-width: 1100px) {
+	.content {
+		width: 100%;
+	}
+	.footer__top {
+		height: 200px;
+	}
+}
+@media (max-width: 768px) {
+	.content {
+		padding: 0 20px;
+	}
+	.menu {
+		padding: 0;
+	}
+	.menu ul {
+		display: none;
+	}
+	.menu__burger {
+		height: 30px;
+		width: 35px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.burger_active {
+		position: relative;
+	}
+	.burger_hidden {
+		
+	}
+	.menu__burger__element {
+		height: 4px;
+		width: 100%;
+		background-color: black;
+		transition: 0.4s;
+	}
+	.burger_active .menu__burger__element {
+		position: absolute;
+		top: 50%;
+		margin-top: -2px;
+	}
+	.burger_active .burger__element1 {
+		transform: rotate(45deg);
+	}
+	.burger_active .burger__element2 {
+		display: none;
+	}
+	.burger_active .burger__element3 {
+		transform: rotate(-45deg);
+	}
+	.menu__mobile {
+		display: block;
+	}
+	.menu_hidden {
+		display: none;
+	}
+	.menu__mobile__li {
+		height: 30px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid lightgrey;
+	}
+	.menu__mobile__li a {
+		width: 100%;
+		height: 100%;
+		padding: 0 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-decoration: none;
+		color: black;
+		font-family: 'CSR';
+	}
+	.menu__mobile__li a:hover {
+		background-color: #7DA626;
+		color: white;
+	}
+	.weHave .items {
+		grid-template-columns: 1fr 1fr;
+	}
+	.item {
+		height: 290px;
+	}
+	.item .img {
+		height: 250px;
+	}
+	.item__overflow {
+		width: 100%;
+		height: 250px;
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	.comments__content__container__comment {
+		width: 100%;
+	}
+	.footer__top__info {
+		grid-template-columns: 1fr;
+	}
+	.footer__top {
+		height: 300px;
+	}
+	.map ul {
+		justify-content: center;
+		flex-direction: column;
+	}
+	.map ul li {
+		margin-top: 10px;
+	}
+	.mapS {
+		grid-row: 1/2;
+	}
+	.iconsS {
+		grid-row: 2/3;
+		margin-bottom: 10px;
+	}
+	.locationS {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.locationS p {
+		display: flex;
+		justify-content: center;
+	}
+	.contacts__conts {
+		flex-direction: column;
+	}
+	.contacts__conts .map {
+		width: 100%;
+	}
+	.contacts__conts__right {
+		width: 100%
+	}
+	.bottomimg {
+		display: none;
+	}
+
+	.prices__price__prokat {
+		flex-direction: column;
+	}
+	.prices__price__prokat__photoes {
+		width: 100%;
+	}
+	.prices__price__prokat__description {
+		width: 100%;
+	}
+	.prices__price__zaselenie {
+		flex-direction: column;
+	}
+	.prices__price__zaselenie__photoes {
+		width: 100%;
+	}
+	.prices__price__zaselenie__description {
+		width: 100%;
+	}
+	.prices__price__zaselenie__photoes {
+		flex-direction: column;
+		height: 600px;
+	}
+	.zaselenie__photoes__photo {
+		height: 50%;
+	}
+	.ser__sec {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin: 20px 0;
+	}
+	.ser__text {
+		width: 100%;
+	}
+	.ser__round {
+		margin: 10px 0;
+	}
+	.house__p {
+		flex-direction: column;
+	}
+	.house__p1 {
+		width: 100%;
+	}
+	.house__p2 {
+		padding: 10px 0;
+		width: 100%;
+	}
+}
+@media (max-width: 480px) {
+	.weHave .items {
+		grid-template-columns: 1fr;
+	}
+	.item .img {
+		height: 250px;
+	}
+	.header__button {
+		margin: 10vh auto;
+		width: 250px;
+		font-size: 22px;
+	}
+	.comments__content__container__comment {
+		flex-direction: column-reverse;
+	}
+	.comment__author {
+		margin-top: 20px;
+	}
+	.content__form__parts {
+		flex-direction: column;	
+	}
+	.prices__price__prokat__photoes {
+		height: 300px;
+	}
+	.footer__top {
+		height: 330px;
+	}
+	.house__gallery__main1, .house__gallery__main2 {
+		height: 300px;
+	}
+	.location__lost {
+		font-size: 14px;
+	}
 }

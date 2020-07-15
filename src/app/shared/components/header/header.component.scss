@@ -1,0 +1,142 @@
+.fixedchanges {
+	position:fixed; 
+	width:100%; 
+}
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	height: 50px;
+}
+.top_menu {
+	position: fixed;
+	width: 100%;
+	box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.75);
+	z-index: 150;
+	background-color: white;
+}
+.top_menu_fake {
+	height: 50px;
+}
+.menu__logo img {
+	height: 40px;
+}
+.menu ul {
+	height: 100%;
+	list-style: none;
+	display: flex;
+}
+.menu ul li {
+	height: 100%;
+	margin-left: 20px;
+}
+.menu ul li a {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	text-transform: uppercase;
+	font-family: 'CSR';
+	color: black;
+}
+.menu ul li a:hover {
+	color: #7DA626;
+}
+.content .menu ul li .selected {
+	color: #7DA626;
+}
+.menu__burger {
+	display: none;
+}
+.menu__mobile {
+	display: none;
+}
+.header {
+	height: 600px;
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-image: url('src/assets/img/header2.jpg');
+	padding-top: 200px;
+	color: white;
+}
+.header h1 {
+	font-family: 'GM';
+	font-size: 42px;
+}
+.header p {
+	font-family: 'GM';
+	font-size: 26px;
+}
+
+@media (max-width: 768px) {
+	.content {
+		padding: 0 20px;
+	}
+	.menu {
+		padding: 0;
+	}
+	.menu ul {
+		display: none;
+	}
+	.menu__burger {
+		height: 30px;
+		width: 35px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.burger_active {
+		position: relative;
+	}
+	.menu__burger__element {
+		height: 4px;
+		width: 100%;
+		background-color: black;
+		transition: 0.4s;
+	}
+	.burger_active .menu__burger__element {
+		position: absolute;
+		top: 50%;
+		margin-top: -2px;
+	}
+	.burger_active .burger__element1 {
+		transform: rotate(45deg);
+	}
+	.burger_active .burger__element2 {
+		display: none;
+	}
+	.burger_active .burger__element3 {
+		transform: rotate(-45deg);
+	}
+	.menu__mobile {
+		display: block;
+	}
+	.menu_hidden {
+		display: none;
+	}
+	.menu__mobile__li {
+		height: 30px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid lightgrey;
+	}
+	.menu__mobile__li a {
+		width: 100%;
+		height: 100%;
+		padding: 0 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-decoration: none;
+		color: black;
+		font-family: 'CSR';
+	}
+	.menu__mobile__li a:hover {
+		background-color: #7DA626;
+		color: white;
+    }
+}

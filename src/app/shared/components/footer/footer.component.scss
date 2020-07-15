@@ -1,0 +1,88 @@
+.footer__top {
+	padding-top: 10px;
+	margin-top: -5px;
+	height: 100px; 
+	background-color: #1E1E25;
+}
+.footer__top__info {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.footer__top__info__element  .icons {
+	display: flex;
+	justify-content: center;
+}
+.footer__top__info__element  .map {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.footer__top__info__element p {
+	font-family: 'CSR';
+	color: #D7D7D9;
+}
+.footer__top__info .mapS {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer__top__info__element .phone::before {
+	content: url('/assets/img/phone.svg');
+	margin-right: 5px;
+}
+.footer__top__info__element .location::before {
+	content: url('/assets/img/location.svg');
+	margin-right: 5px;
+}
+.icons {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.icon {
+	height: 45px;
+	width: 55px;
+	background-size: cover;
+	margin-right: 20px;
+}
+.icon a {
+	width: 100%;
+	height: 100%;
+}
+.icon a div{
+	width: 100%;
+	height: 100%;
+}
+.icon1 {
+	background-image: url('/assets/img/icon_vk2.svg');
+}
+.icon1:hover {
+	background-image: url('/assets/img/icon_vk1.svg');
+}
+.icon2 {
+	margin-top: 10px;
+	width: 45px;
+	background-image: url('/assets/img/icon_inst2.svg');
+}
+.icon2:hover {
+	background-image: url('/assets/img/icon_inst1.svg');
+}
+.map ul {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	list-style: none;
+}
+.map ul li {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.map ul li a {
+	font-family: 'CSR';
+	color: #D7D7D9;
+	text-decoration: none;
+}
+.map ul li a:hover {
+	color: white;
+}
