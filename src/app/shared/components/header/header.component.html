@@ -6,10 +6,11 @@
                     <img src="/assets/img/logo.png" alt="">
                 </div>
                 <ul>
-                    <li><a href="index.html">О нас</a></li>
-                    <li><a href="#" class="selected">Услуги</a></li>
-                    <li><a href="price.html">Цены</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a routerLink="" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}">О нас</a></li>
+                    <li><a routerLink="/service" routerLinkActive="selected">Услуги</a></li>
+                    <li><a routerLink="/price" routerLinkActive="selected">Цены</a></li>
+                    <li><a routerLink="/galery" routerLinkActive="selected">Галерея</a></li>
+                    <li><a routerLink="/contact" routerLinkActive="selected">Контакты</a></li>
                 </ul>
                 <div class="menu__burger burger_hidden">
                     <div class="menu__burger__element burger__element1"></div>
@@ -19,10 +20,11 @@
             </div>
         </div>
             <div class="menu__mobile menu_hidden">
-                <div class="menu__mobile__li"><a href="index.html">О нас</a></div>
-                <div class="menu__mobile__li"><a href="#">Услуги</a></div>
-                <div class="menu__mobile__li"><a href="price.html">Цены</a></div>
-                <div class="menu__mobile__li"><a href="contact.html">Контакты</a></div>
+                <div class="menu__mobile__li"><a routerLink="">О нас</a></div>
+                <div class="menu__mobile__li"><a routerLink="/service">Услуги</a></div>
+                <div class="menu__mobile__li"><a routerLink="/price">Цены</a></div>
+                <div class="menu__mobile__li"><a routerLink="/galery">Галерея</a></div>
+                <div class="menu__mobile__li"><a routerLink="/contact">Контакты</a></div>
             </div>
     </div>
     <div class="top_menu_fake"></div>

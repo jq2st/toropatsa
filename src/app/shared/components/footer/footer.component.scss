@@ -86,3 +86,52 @@
 .map ul li a:hover {
 	color: white;
 }
+
+@media (max-width: 1100px) {
+	.footer__top {
+		height: 200px;
+	}
+}
+    
+@media (max-width: 768px) {
+    .footer__top__info {
+        grid-template-columns: 1fr;
+    }
+    .footer__top {
+        height: 300px;
+    }
+    .map ul {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .map ul li {
+        margin-top: 10px;
+    }
+    .mapS {
+        grid-row: 1/2;
+    }
+    .iconsS {
+        grid-row: 2/3;
+        margin-bottom: 10px;
+    }
+    .locationS {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .locationS p {
+        display: flex;
+        justify-content: center;
+    }
+    .contacts__conts {
+        flex-direction: column;
+    }
+    .contacts__conts .map {
+        width: 100%;
+    }
+    .contacts__conts__right {
+        width: 100%
+    }
+    .bottomimg {
+        display: none;
+    }
+}

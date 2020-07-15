@@ -10,6 +10,11 @@ import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-pa
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { ServicePageComponent } from './main-layout/service-page/service-page.component';
+import { AboutPageComponent } from './main-layout/about-page/about-page.component';
+import { PricePageComponent } from './main-layout/price-page/price-page.component';
+import { ContactPageComponent } from './main-layout/contact-page/contact-page.component';
+import { GaleryPageComponent } from './main-layout/galery-page/galery-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { HeaderComponent } from './shared/components/header/header.component';
     AdminLoginPageComponent,
     MainLayoutComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ServicePageComponent,
+    AboutPageComponent,
+    PricePageComponent,
+    ContactPageComponent,
+    GaleryPageComponent
   ],
   imports: [
     BrowserModule,
