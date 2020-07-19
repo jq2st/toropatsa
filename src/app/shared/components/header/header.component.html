@@ -12,14 +12,14 @@
                     <li><a routerLink="/galery" routerLinkActive="selected">Галерея</a></li>
                     <li><a routerLink="/contact" routerLinkActive="selected">Контакты</a></li>
                 </ul>
-                <div class="menu__burger burger_hidden">
+                <div class="menu__burger burger_hidden" (click)="isMobileMenu = !isMobileMenu">
                     <div class="menu__burger__element burger__element1"></div>
                     <div class="menu__burger__element burger__element2"></div>
                     <div class="menu__burger__element burger__element3"></div>
                 </div>
             </div>
         </div>
-            <div class="menu__mobile menu_hidden">
+            <div class="menu__mobile" *ngIf="isMobileMenu">
                 <div class="menu__mobile__li"><a routerLink="">О нас</a></div>
                 <div class="menu__mobile__li"><a routerLink="/service">Услуги</a></div>
                 <div class="menu__mobile__li"><a routerLink="/price">Цены</a></div>

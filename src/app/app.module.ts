@@ -15,6 +15,7 @@ import { AboutPageComponent } from './main-layout/about-page/about-page.componen
 import { PricePageComponent } from './main-layout/price-page/price-page.component';
 import { ContactPageComponent } from './main-layout/contact-page/contact-page.component';
 import { GaleryPageComponent } from './main-layout/galery-page/galery-page.component';
+import { GaleryPopupComponent } from './shared/components/galery-popup/galery-popup.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { GaleryPageComponent } from './main-layout/galery-page/galery-page.compo
     AboutPageComponent,
     PricePageComponent,
     ContactPageComponent,
-    GaleryPageComponent
+    GaleryPageComponent,
+    GaleryPopupComponent
   ],
   imports: [
     BrowserModule,

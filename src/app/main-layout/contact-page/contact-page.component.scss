@@ -1,0 +1,73 @@
+.contacts__contact {
+	min-height: 50vh;
+	margin-bottom: 15px;
+}
+.contacts__conts {
+	display: flex;
+	justify-content: space-between;
+}
+.contacts__conts .map {
+	width: 60%;
+	border: 2px solid #1E1E25; 
+	border-radius: 5px;
+}
+.contacts__conts__right p {
+	font-family: 'CSR';
+	font-size: 20px;
+}
+.contacts__conts__right a {
+	font-family: 'CSR';
+	font-size: 20px;
+	color: grey;
+	text-decoration: none;
+}
+.contacts__conts__right a:hover {
+	color: black;
+}
+.contacts__conts__right h3 {
+	margin-top: 5px;
+	font-family: 'GM';
+}
+.contacts__conts__right .phone::before {
+	content: url('/assets/img/phone.svg');
+	margin-right: 5px;
+}
+.contacts__conts__right .location::before {
+	content: url('/assets/img/location.svg');
+	margin-right: 5px;
+}
+.contacts__conts__right .vklink::before {
+	content: url('/assets/img/vk.svg');
+	margin-right: 5px;
+}
+.contacts__conts__right .instlink::before {
+	content: url('/assets/img/inst.svg');
+	margin-right: 5px;
+}
+.contacts__conts__right .mailadr::before {
+	content: url('/assets/img/mail.svg');
+	margin-right: 5px;
+}
+.bottomimg {
+	bottom: 0;
+	height: 300px;
+	width: 100%;
+	background-image: url('/assets/img/bottom.png');
+	background-position: 50% 54%;
+	background-repeat: repeat-x;
+}
+
+@media (max-width: 768px) {
+    .contacts__conts {
+		flex-direction: column;
+	}
+	.contacts__conts .map {
+		width: 100%;
+	}
+	.contacts__conts__right {
+		width: 100%
+	}
+	.bottomimg {
+		display: none;
+	}
+}

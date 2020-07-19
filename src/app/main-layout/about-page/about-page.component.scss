@@ -1,0 +1,216 @@
+.header {
+	height: 600px;
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-image: url('src/assets/img/header2.jpg');
+	padding-top: 200px;
+	color: white;
+}
+.header h1 {
+	font-family: 'GM';
+	font-size: 42px;
+}
+.header p {
+	font-family: 'GM';
+	font-size: 26px;
+}
+.weHave .items {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 15px;
+}
+.item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 260px;
+	font-family: 'GM';
+	overflow: hidden;
+	background-color: #fff;
+	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.75);
+}
+.item a {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 50;
+}
+.item:hover {
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #7DA626;
+	color: white;
+}
+.item .img {
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+ }
+.item:hover .img {
+	-webkit-transform: scale(1.2);
+ 	-moz-transform: scale(1.2);
+ 	-o-transform: scale(1.2);
+}
+.item__overflow {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.item .img {
+	width: 100%;
+	height: 200px;
+}
+.item1 .img {
+	background-image: url('/assets/img/i3.jpg');
+	background-size: cover;
+}
+.item2 .img {
+	background-image: url('/assets/img/i6.jpg');
+	background-size: cover;
+}
+.item3 .img {
+	background-image: url('/assets/img/i4.jpg');
+	background-size: cover;
+}
+.item4 .img {
+	background-image: url('/assets/img/i5.jpg');
+	background-size: cover;
+	background-position: 70% 50%;
+}
+.item5 .img {
+	background-image: url('/assets/img/i1.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.item6 .img {
+	background-image: url('/assets/img/i2.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.item7 .img {
+	background-image: url('/assets/img/i7.jpg');
+	background-size: cover;
+}
+.item8 .img {
+	background-image: url('/assets/img/i8.jpg');
+	background-size: cover;
+	background-position: 50% 0%;
+}
+.about__h-line {
+	margin-top: 20px;
+	height: 100px;
+	font-family: 'GM';
+	font-size: 22px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #274001;
+	color: white;
+}
+.aboutusA {
+	background-color:#274001;
+}
+.aboutus {
+	padding-bottom: 20px;
+}
+.aboutus p {
+	font-family: 'CSR';
+	margin-bottom: 5px;
+	color: white;
+}
+.header__button {
+	margin-top: 10vh;
+	height: 40px;
+	width: 200px;
+	border-radius: 50px;
+	font-family: 'GM';
+	background-color: #7DA626;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header__button:hover {
+	cursor: pointer;
+	box-shadow: 0px 6px 8px 0px rgba(125,166,38,0.75);
+}
+.comments__content__container__comment {
+	margin: 5px auto;
+	padding: 10px 20px;
+	min-height: 150px;
+	width: 750px;
+	border: 1px solid lightgrey;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+}
+.comment__author {
+	height: 100px;
+	min-width: 100px;
+	background-size: cover;
+	border-radius: 50px;
+	margin-right: 20px;
+}
+.author1 {
+	background-image: url('/assets/img/c1.jpg');
+}
+.author2 {
+	background-image: url('/assets/img/c2.jpg');
+}
+.author3 {
+	background-image: url('/assets/img/c3.jpg');
+	position: 60% 50%;
+}
+.comment__name h3 {
+	font-family: 'GM';
+}
+.comment__text {
+	font-family: 'CSR';
+}
+
+@media (max-width: 768px) {
+	.weHave .items {
+		grid-template-columns: 1fr 1fr;
+	}
+	.item {
+		height: 290px;
+	}
+	.item .img {
+		height: 250px;
+	}
+	.item__overflow {
+		width: 100%;
+		height: 250px;
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	.comments__content__container__comment {
+		width: 100%;
+	}
+}
+
+@media (max-width: 480px) {
+	.weHave .items {
+		grid-template-columns: 1fr;
+	}
+	.item .img {
+		height: 250px;
+	}
+	.header__button {
+		margin: 10vh auto;
+		width: 250px;
+		font-size: 22px;
+	}
+	.comments__content__container__comment {
+		flex-direction: column-reverse;
+	}
+	.comment__author {
+		margin-top: 20px;
+	}
+	.content__form__parts {
+		flex-direction: column;	
+	}
+}

@@ -1,1 +1,15 @@
-<p>galery-page works!</p>
+<div class="h-line">
+    Галерея
+</div>
+<div class="galery-photoes content">
+    <div class="galery-photoes__photo" (click)="popupService.isGalery = true"></div>
+    <div class="galery-photoes__photo"></div>
+    <div class="galery-photoes__photo"></div>
+    <div class="galery-photoes__photo"></div>
+    <div class="galery-photoes__photo"></div>
+    <div class="galery-photoes__photo"></div>
+    <div class="galery-photoes__photo"></div>
+    <div class="galery-photoes__photo"></div>
+    <div class="galery-photoes__photo"></div>
+</div>
+<app-galery-popup *ngIf="popupService.isGalery"></app-galery-popup>

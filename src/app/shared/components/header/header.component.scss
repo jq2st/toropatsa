@@ -53,23 +53,6 @@
 .menu__mobile {
 	display: none;
 }
-.header {
-	height: 600px;
-	background-size: cover;
-	background-position: top;
-	background-repeat: no-repeat;
-	background-image: url('src/assets/img/header2.jpg');
-	padding-top: 200px;
-	color: white;
-}
-.header h1 {
-	font-family: 'GM';
-	font-size: 42px;
-}
-.header p {
-	font-family: 'GM';
-	font-size: 26px;
-}
 
 @media (max-width: 768px) {
 	.content {
