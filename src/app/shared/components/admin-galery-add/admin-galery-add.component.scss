@@ -1,0 +1,49 @@
+.popup-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+} 
+.popup {
+    width: 700px;
+    height: 400px;
+    overflow-y: auto;
+    background-color: white;
+}
+.pupup-inner {
+    padding: 50px 20px;
+    form {
+        input[type="text"] {
+            padding: 5px 0;
+            border: 0;
+            border-bottom: 2px solid #000;
+            outline: none;
+            &:focus {
+                border: 0;
+                border-bottom: 2px solid #027368;
+            }
+        }
+    }
+}
+.form-unit {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.addbutton {
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #027368;
+    color: white;
+    cursor: pointer;
+}

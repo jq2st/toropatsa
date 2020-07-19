@@ -2,7 +2,7 @@
     <div class="admin-page-name">
         Галерея
     </div>
-    <div class="galery-addpic">Добавить фото</div>
+    <div class="galery-addpic" (click)="isAddPopup = true">Добавить фото</div>
 </div>
 <div class="admin-galery">
     <div class="admin-galery__item">
@@ -18,3 +18,4 @@
         </div>
     </div>
 </div>
+<app-admin-galery-add *ngIf="isAddPopup"></app-admin-galery-add>
