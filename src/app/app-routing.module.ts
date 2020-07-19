@@ -18,10 +18,12 @@ const routes: Routes = [
     {path: 'galery', component: GaleryPageComponent},
     {path: 'contact', component: ContactPageComponent},
   ]},
-  {path: 'admin', redirectTo: '/dashboard'},
-  {path: 'dashboard',  component: AdminLayoutComponent, children: [
+  {path: 'admin', children: [
+    {path: '', redirectTo: '/admin/dashboard', pathMatch: 'full'},
+    {path: 'dashboard',  component: AdminLayoutComponent, children: [
       {path: 'galery', component: AdminGaleryPageComponent}
-  ]}
+    ]}
+  ]},
 ];
 
 @NgModule({

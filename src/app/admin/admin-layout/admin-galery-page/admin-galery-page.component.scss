@@ -1,0 +1,32 @@
+.admin-galery {
+    margin-top: 50px;
+}
+.admin-galery-title {
+    display: flex;
+    justify-content: space-between;
+}
+.galery-addpic {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    width: 150px;
+    border: 2px solid #027368;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: #027368;
+        color: white;
+    }
+}
+.admin-galery__item {
+    display: flex;
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+}
+.galery-item__pic {
+    width: 200px;
+    height: 100px;
+    background-image: url('/assets/img/header2.jpg');
+    background-size: cover;
+    margin-right: 20px;
+}
