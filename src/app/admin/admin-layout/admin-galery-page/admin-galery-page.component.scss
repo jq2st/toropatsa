@@ -20,13 +20,38 @@
 }
 .admin-galery__item {
     display: flex;
+    justify-content: space-between;
     border-bottom: 1px solid grey;
     padding: 10px 0;
+    transition: .3s;
+    .galery-item__part {
+        display: flex;
+    }
+}
+.item-part-left {
+    &:hover {
+        color: #027368;
+        cursor: pointer;
+        .galery-item__pic {
+           border: 4px solid #027368;
+        }
+        .admin-galery__item {
+            border-bottom: 1px solid #027368;
+        }
+    }
 }
 .galery-item__pic {
+    transition: .3s;
     width: 200px;
     height: 100px;
     background-image: url('/assets/img/header2.jpg');
     background-size: cover;
     margin-right: 20px;
+}
+.delete-item {
+    color: crimson;
+    cursor: pointer; 
+    &:hover {
+        color: red;
+    }
 }

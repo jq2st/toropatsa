@@ -18,6 +18,7 @@ import { ContactPageComponent } from './main-layout/contact-page/contact-page.co
 import { GaleryPageComponent } from './main-layout/galery-page/galery-page.component';
 import { GaleryPopupComponent } from './shared/components/galery-popup/galery-popup.component';
 import { AdminGaleryPageComponent } from './admin/admin-layout/admin-galery-page/admin-galery-page.component';
+import { AdminGaleryAddComponent } from './shared/components/admin-galery-add/admin-galery-add.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AdminGaleryPageComponent } from './admin/admin-layout/admin-galery-page
     ContactPageComponent,
     GaleryPageComponent,
     GaleryPopupComponent,
-    AdminGaleryPageComponent
+    AdminGaleryPageComponent,
+    AdminGaleryAddComponent
   ],
   imports: [
     BrowserModule,
