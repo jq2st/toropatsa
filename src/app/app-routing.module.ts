@@ -7,6 +7,7 @@ import { ServicePageComponent } from './main-layout/service-page/service-page.co
 import { PricePageComponent } from './main-layout/price-page/price-page.component';
 import { GaleryPageComponent } from './main-layout/galery-page/galery-page.component';
 import { ContactPageComponent } from './main-layout/contact-page/contact-page.component';
+import { AdminGaleryPageComponent } from './admin/admin-layout/admin-galery-page/admin-galery-page.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,10 @@ const routes: Routes = [
     {path: 'galery', component: GaleryPageComponent},
     {path: 'contact', component: ContactPageComponent},
   ]},
-  {path: 'admin', component: AdminLayoutComponent},
+  {path: 'admin', redirectTo: '/dashboard'},
+  {path: 'dashboard',  component: AdminLayoutComponent, children: [
+      {path: 'galery', component: AdminGaleryPageComponent}
+  ]}
 ];
 
 @NgModule({

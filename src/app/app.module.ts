@@ -17,6 +17,7 @@ import { PricePageComponent } from './main-layout/price-page/price-page.componen
 import { ContactPageComponent } from './main-layout/contact-page/contact-page.component';
 import { GaleryPageComponent } from './main-layout/galery-page/galery-page.component';
 import { GaleryPopupComponent } from './shared/components/galery-popup/galery-popup.component';
+import { AdminGaleryPageComponent } from './admin/admin-layout/admin-galery-page/admin-galery-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { GaleryPopupComponent } from './shared/components/galery-popup/galery-po
     PricePageComponent,
     ContactPageComponent,
     GaleryPageComponent,
-    GaleryPopupComponent
+    GaleryPopupComponent,
+    AdminGaleryPageComponent
   ],
   imports: [
     BrowserModule,

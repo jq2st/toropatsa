@@ -3,3 +3,10 @@ export interface Facy {
     description: string,
     photo: string 
 } 
+
+export interface Pic {
+    id? : string,
+    name: string,
+    photo: string,
+    description: string
+}

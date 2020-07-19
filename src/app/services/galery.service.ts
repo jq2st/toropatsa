@@ -11,7 +11,11 @@ export class GaleryService {
   constructor(private http: HttpClient) { }
 
   getPicList() {
-
+    return this.http.get(this.link)
   }
-  
+
+  addPic(pic) {
+    return this.http.post(this.link, pic)
+  }
+
 }
