@@ -2,21 +2,21 @@
     <div class="popup">
         <div class="pupup-inner">
             <h2>Добавить фото</h2>
-            <form>
+            <form [formGroup]="form" (submit)="addPic()">
                 <div class="form-unit">
                     <input type="file">
                 </div>
                 <div class="form-unit">
                     <label for="description">Название</label>
-                    <input type="text" placeholder="Название фотографии">
+                    <input type="text" placeholder="Название фотографии" formControlName="name">
                 </div>
                 <div class="form-unit">
                     <label for="description">Описание</label>
-                    <input type="text" placeholder="Описание фотографии">
+                    <input type="text" placeholder="Описание фотографии" formControlName="description">
                 </div>
-                <div class="addbutton">Добавить</div>
+                <button type="submit" class="addbutton" [disabled]="form.invalid">Добавить</button>
             </form>
         </div>
-        <div class="close"></div>
+        <div class="close" (click)="closePopup()"></div>
     </div>
 </div>

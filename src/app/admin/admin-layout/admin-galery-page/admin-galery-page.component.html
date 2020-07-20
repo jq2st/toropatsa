@@ -18,4 +18,4 @@
         </div>
     </div>
 </div>
-<app-admin-galery-add *ngIf="isAddPopup"></app-admin-galery-add>
+<app-admin-galery-add *ngIf="isAddPopup" (onClose)="isAddPopup = false"></app-admin-galery-add>
