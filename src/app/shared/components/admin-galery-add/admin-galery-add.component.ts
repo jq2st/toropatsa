@@ -3,7 +3,7 @@ import { Pic } from '../../interfaces/interfaces';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { AngularFireStorage } from 'angularfire2/storage';
-import { finalize } from "rxjs/operators";
+import { GaleryService } from 'src/app/services/galery.service';
 
 @Component({
   selector: 'app-admin-galery-add',
@@ -22,7 +22,7 @@ export class AdminGaleryAddComponent implements OnInit {
   selectedFile: File = null;
   fb;
 
-  constructor(private afStorage: AngularFireStorage) { }
+  constructor(private afStorage: AngularFireStorage, private galeryService: GaleryService) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -43,10 +43,16 @@ export class AdminGaleryAddComponent implements OnInit {
   }
 
   addPic() {
-    let n = Date.now();
-    this.afStorage.upload('/n/jn', this.fileToUpload);  
-
-    this.closePopup()
+    let data: Pic
+    let qt = Date.now();
+    let stName = '/galary/' + qt + '_' + this.fileToUpload.name
+    this.afStorage.upload(stName, this.fileToUpload)
+    data = {name: this.form.value.name, description: this.form.value.description, photo: stName}
+    this.galeryService.addPic(data)
+      .subscribe(item => {
+        this.onAdd.emit(item)
+        this.closePopup()
+      })
   }
 
  

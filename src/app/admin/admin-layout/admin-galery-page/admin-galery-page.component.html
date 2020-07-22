@@ -5,12 +5,12 @@
     <div class="galery-addpic" (click)="isAddPopup = true">Добавить фото</div>
 </div>
 <div class="admin-galery">
-    <div class="admin-galery__item">
+    <div class="admin-galery__item" *ngFor="let item of galeryItemsList">
         <div class="galery-item__part item-part-left">
             <div class="galery-item__pic"></div>
             <div class="galery-item__info">
-                <h3>{{'Название'}}</h3>
-                <p>{{'Описание'}}</p>
+                <h3>{{item.name}}</h3>
+                <p>{{item.description}}</p>
             </div>
         </div>
         <div class="galery-item__part">
@@ -18,4 +18,4 @@
         </div>
     </div>
 </div>
-<app-admin-galery-add *ngIf="isAddPopup" (onClose)="isAddPopup = false"></app-admin-galery-add>
+<app-admin-galery-add *ngIf="isAddPopup" (onClose)="isAddPopup = false" (onAdd)="addItem($event)"></app-admin-galery-add>
