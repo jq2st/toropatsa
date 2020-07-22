@@ -4,7 +4,7 @@
             <h2>Добавить фото</h2>
             <form [formGroup]="form" (submit)="addPic()">
                 <div class="form-unit">
-                    <input type="file">
+                    <input type="file" (change)="onFileChange($event)" formControlName="file" accept=".png,.jpg">
                 </div>
                 <div class="form-unit">
                     <label for="description">Название</label>

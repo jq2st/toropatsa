@@ -1,6 +1,9 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Pic } from '../../interfaces/interfaces';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { AngularFireStorage } from 'angularfire2/storage';
+import { finalize } from "rxjs/operators";
 
 @Component({
   selector: 'app-admin-galery-add',
@@ -11,14 +14,19 @@ export class AdminGaleryAddComponent implements OnInit {
 
   isAddPopup: boolean = false
   form: FormGroup
+  fileToUpload: File = null
 
   @Output() onClose = new EventEmitter()
   @Output() onAdd = new EventEmitter<Pic>()
 
-  constructor() { }
+  selectedFile: File = null;
+  fb;
+
+  constructor(private afStorage: AngularFireStorage) { }
 
   ngOnInit() {
     this.form = new FormGroup({
+      file: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required)
     })
@@ -28,9 +36,22 @@ export class AdminGaleryAddComponent implements OnInit {
     this.onClose.emit(null)
   }
 
+  onFileChange(event) {
+    if (event.target.files.length > 0) {
+      this.fileToUpload = event.target.files[0]
+    }
+  }
+
   addPic() {
-    console.log(this.form)
+    let n = Date.now();
+    this.afStorage.upload('/n/jn', this.fileToUpload);  
+
     this.closePopup()
   }
+
+ 
+  
+
+   
 
 }

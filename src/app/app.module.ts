@@ -20,6 +20,11 @@ import { GaleryPageComponent } from './main-layout/galery-page/galery-page.compo
 import { GaleryPopupComponent } from './shared/components/galery-popup/galery-popup.component';
 import { AdminGaleryPageComponent } from './admin/admin-layout/admin-galery-page/admin-galery-page.component';
 import { AdminGaleryAddComponent } from './shared/components/admin-galery-add/admin-galery-add.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -45,9 +50,12 @@ import { AdminGaleryAddComponent } from './shared/components/admin-galery-add/ad
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
