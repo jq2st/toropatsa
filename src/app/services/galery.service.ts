@@ -13,7 +13,17 @@ export class GaleryService {
   constructor(private http: HttpClient) { }
 
   getPicList() {
-    return this.http.get(this.link)
+    return this.http.get(this.link + 'galery.json')
+    .pipe(
+      map((resp: Pic[]) => {
+        return  Object
+          .keys(resp)
+          .map(key => ({
+            ...resp[key],
+            id: key
+          }))
+      })
+    )
   }
 
   addPic(pic) {

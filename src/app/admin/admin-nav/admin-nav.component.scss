@@ -1,6 +1,5 @@
 .admin-nav {
-    width: 300px;
-    height: 100vh;
+    height: 100%;
     border-right: 2px solid #027368;
     &__element {
         display: flex;
@@ -9,11 +8,16 @@
         height: 30px;
         width: 100%;
         a {
+            color: black;
+            text-decoration: none;
             cursor: pointer;
             &_active {
                 color: #027368;
             }
             &:hover {
+                color: #027368;
+            }
+            &.admin-active {
                 color: #027368;
             }
         }

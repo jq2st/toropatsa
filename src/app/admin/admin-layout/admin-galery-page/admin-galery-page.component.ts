@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pic } from 'src/app/shared/interfaces/interfaces';
+import { GaleryService } from 'src/app/services/galery.service';
 
 @Component({
   selector: 'app-admin-galery-page',
@@ -10,9 +11,14 @@ export class AdminGaleryPageComponent implements OnInit {
 
   galeryItemsList: Pic[] = []
 
-  constructor() { }
+  constructor(private galeryService: GaleryService) { }
 
   ngOnInit() {
+    this.galeryService.getPicList()
+      .subscribe((items: Pic[]) => {
+        console.log(items)
+        this.galeryItemsList = items
+      })
   }
 
   addItem(event) {
