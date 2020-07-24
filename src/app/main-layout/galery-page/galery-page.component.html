@@ -2,14 +2,6 @@
     Галерея
 </div>
 <div class="galery-photoes content">
-    <div class="galery-photoes__photo" (click)="popupService.isGalery = true"></div>
-    <div class="galery-photoes__photo"></div>
-    <div class="galery-photoes__photo"></div>
-    <div class="galery-photoes__photo"></div>
-    <div class="galery-photoes__photo"></div>
-    <div class="galery-photoes__photo"></div>
-    <div class="galery-photoes__photo"></div>
-    <div class="galery-photoes__photo"></div>
-    <div class="galery-photoes__photo"></div>
+    <div class="galery-photoes__photo" (click)="popupService.isGalery = true" *ngFor="let item of galeryItemsList" [ngStyle]="{'background-image': 'url(' + item.photo + ')'}"></div>
 </div>
 <app-galery-popup *ngIf="popupService.isGalery"></app-galery-popup>

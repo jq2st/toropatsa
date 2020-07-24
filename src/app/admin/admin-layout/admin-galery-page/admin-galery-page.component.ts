@@ -16,7 +16,9 @@ export class AdminGaleryPageComponent implements OnInit {
   ngOnInit() {
     this.galeryService.getPicList()
       .subscribe((items: Pic[]) => {
-        console.log(items)
+        items.map(n => {
+          
+        })
         this.galeryItemsList = items
       })
   }

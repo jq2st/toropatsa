@@ -7,7 +7,7 @@
 <div class="admin-galery">
     <div class="admin-galery__item" *ngFor="let item of galeryItemsList">
         <div class="galery-item__part item-part-left">
-            <div class="galery-item__pic" [ngStyle]="{'background': 'url(https://toropatsa-4e75a.appspot.com' + item.photo + ')'}"></div>
+            <div class="galery-item__pic" [ngStyle]="{'background-image': 'url(' + item.photo + ')'}"></div>
             <div class="galery-item__info">
                 <h3>{{item.name}}</h3>
                 <p>{{item.description}}</p>
