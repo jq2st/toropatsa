@@ -24,8 +24,14 @@ export class AdminGaleryPageComponent implements OnInit {
   }
 
   addItem(event) {
-    console.log(event)
     this.galeryItemsList.push(event)
+  }
+
+  deleteItem(id) {
+    this.galeryService.deletePic(id)
+      .subscribe(() => {
+        this.galeryItemsList = this.galeryItemsList.filter(n => n.id != id)
+      })
   }
 
 }

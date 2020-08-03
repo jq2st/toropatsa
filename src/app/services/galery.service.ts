@@ -38,4 +38,8 @@ export class GaleryService {
       )
   }
 
+  deletePic(id) {
+    return this.http.delete(this.link + 'galery/' + id + '.json')
+  }
+
 }
