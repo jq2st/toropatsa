@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-            <div class="menu__mobile" *ngIf="isMobileMenu">
+            <div class="menu__mobile" *ngIf="isMobileMenu" (click)="isMobileMenu = !isMobileMenu">
                 <div class="menu__mobile__li"><a routerLink="">О нас</a></div>
                 <div class="menu__mobile__li"><a routerLink="/service">Услуги</a></div>
                 <div class="menu__mobile__li"><a routerLink="/price">Цены</a></div>
