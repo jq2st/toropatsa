@@ -3,8 +3,14 @@
 }
 .admin-main {
     display: flex;
+    flex: 1;
 }
 .admin-page {
     padding: 20px;
     flex: 1;
+}
+.admin-layoutjj {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

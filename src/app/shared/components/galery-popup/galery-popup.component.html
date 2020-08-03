@@ -2,10 +2,10 @@
     <div class="galery-popup">
         <div class="galery-popup-inner">
             <div class="galery-parts">
-                <div class="galery-parts__img"></div>
+                <div class="galery-parts__img" [ngStyle]="{'background-image': 'url(' + item.photo + ')'}"></div>
                 <div class="galery-parts__desc">
-                    <h2>{{'Название фотографии'}}</h2>
-                    <p>Описание фото</p>
+                    <h2>{{item.name}}</h2>
+                    <p>{{item.description}}</p>
                 </div>
             </div>
         </div>

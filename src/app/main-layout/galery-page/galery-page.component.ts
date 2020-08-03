@@ -10,6 +10,7 @@ import { Pic } from 'src/app/shared/interfaces/interfaces';
 })
 export class GaleryPageComponent implements OnInit {
 
+  qitem
   galeryItemsList: Pic[] = []
 
   constructor(public popupService: PopupService, private galeryService: GaleryService) { }

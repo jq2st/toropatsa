@@ -21,3 +21,8 @@
         grid-gap: 10px;
     }
 }
+@media (max-width: 560px) {
+    .galery-photoes {
+        grid-template-columns: 1fr;
+    }
+}
