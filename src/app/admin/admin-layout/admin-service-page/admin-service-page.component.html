@@ -1,0 +1,21 @@
+<div class="admin-service-title">
+    <div class="admin-page-name">
+        Галерея
+    </div>
+    <div class="service-addpic" (click)="isAddPopup = true">Добавить фото</div>
+</div>
+<div class="admin-service">
+    <div class="admin-service__item" *ngFor="let item of serviceItemsList">
+        <div class="service-item__part item-part-left">
+            <div class="service-item__pic" [ngStyle]="{'background-image': 'url(' + item.photo + ')'}"></div>
+            <div class="service-item__info">
+                <h3>{{item.name}}</h3>
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+        <div class="service-item__part">
+            <div class="delete-item" (click)="deleteItem(item.id)">Удалить</div>
+        </div>
+    </div>
+</div>
+<app-admin-service-add *ngIf="isAddPopup" (onClose)="isAddPopup = false" (onAdd)="addItem($event)"></app-admin-service-add>

@@ -8,6 +8,7 @@ import { PricePageComponent } from './main-layout/price-page/price-page.componen
 import { GaleryPageComponent } from './main-layout/galery-page/galery-page.component';
 import { ContactPageComponent } from './main-layout/contact-page/contact-page.component';
 import { AdminGaleryPageComponent } from './admin/admin-layout/admin-galery-page/admin-galery-page.component';
+import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
     {path: 'contact', component: ContactPageComponent},
   ]},
   {path: 'admin', children: [
-    {path: '', redirectTo: '/admin/dashboard', pathMatch: 'full'},
+    {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
+    {path: 'login', component: AdminLoginPageComponent},
     {path: 'dashboard',  component: AdminLayoutComponent, children: [
       {path: 'galery', component: AdminGaleryPageComponent}
     ]}

@@ -24,6 +24,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
 import { environment } from 'src/environments/environment';
+import { AdminServicePageComponent } from './admin/admin-layout/admin-service-page/admin-service-page.component';
+import { AdminServiceAddComponent } from './shared/components/admin-service-add/admin-service-add.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { environment } from 'src/environments/environment';
     GaleryPageComponent,
     GaleryPopupComponent,
     AdminGaleryPageComponent,
-    AdminGaleryAddComponent
+    AdminGaleryAddComponent,
+    AdminServicePageComponent,
+    AdminServiceAddComponent
   ],
   imports: [
     BrowserModule,
