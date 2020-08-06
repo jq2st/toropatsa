@@ -36,7 +36,7 @@ export class AdminGaleryAddComponent implements OnInit {
     this.form = new FormGroup({
       file: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
-      description: new FormControl('', Validators.required)
+      description: new FormControl('')
     })
   }
 
@@ -66,7 +66,6 @@ export class AdminGaleryAddComponent implements OnInit {
           this.onAdd.emit(item)
           this.closePopup()
         })
-        console.log(this.url)
         // this.db.collection('files').add( { downloadURL: this.downloadURL, path })
       }),
     ).subscribe(n => {

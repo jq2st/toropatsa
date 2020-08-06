@@ -9,6 +9,7 @@ import { GaleryPageComponent } from './main-layout/galery-page/galery-page.compo
 import { ContactPageComponent } from './main-layout/contact-page/contact-page.component';
 import { AdminGaleryPageComponent } from './admin/admin-layout/admin-galery-page/admin-galery-page.component';
 import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
+import { AuthGuard } from './services/auth.guard';
 
 
 const routes: Routes = [
@@ -22,7 +23,7 @@ const routes: Routes = [
   {path: 'admin', children: [
     {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
     {path: 'login', component: AdminLoginPageComponent},
-    {path: 'dashboard',  component: AdminLayoutComponent, children: [
+    {path: 'dashboard',  component: AdminLayoutComponent, canActivate: [AuthGuard], children: [
       {path: 'galery', component: AdminGaleryPageComponent}
     ]}
   ]},

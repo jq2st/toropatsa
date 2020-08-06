@@ -23,7 +23,7 @@ export class AdminLoginPageComponent implements OnInit {
 
   toDash() {
     const user = {
-      login: this.form.value.login,
+      email: this.form.value.login,
       password: this.form.value.password
     }
     this.auth.login(user)

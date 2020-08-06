@@ -49,6 +49,10 @@
     color: white;
     cursor: pointer;
 }
+.addbutton:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
 .close {
     position: absolute;
     top: 10px;
