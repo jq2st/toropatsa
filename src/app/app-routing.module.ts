@@ -10,6 +10,7 @@ import { ContactPageComponent } from './main-layout/contact-page/contact-page.co
 import { AdminGaleryPageComponent } from './admin/admin-layout/admin-galery-page/admin-galery-page.component';
 import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
 import { AuthGuard } from './services/auth.guard';
+import { AdminServicePageComponent } from './admin/admin-layout/admin-service-page/admin-service-page.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
     {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
     {path: 'login', component: AdminLoginPageComponent},
     {path: 'dashboard',  component: AdminLayoutComponent, canActivate: [AuthGuard], children: [
-      {path: 'galery', component: AdminGaleryPageComponent}
+      {path: 'galery', component: AdminGaleryPageComponent},
+      {path: 'service', component: AdminServicePageComponent},
     ]}
   ]},
 ];

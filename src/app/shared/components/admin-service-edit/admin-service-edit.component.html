@@ -1,7 +1,7 @@
 <div class="popup-bg">
     <div class="popup">
         <div class="pupup-inner">
-            <h2>Добавить услугу</h2>
+            <h2>Редактирование услуги</h2>
             <form [formGroup]="form" (submit)="addPic()">
                 <div class="form-unit">
                     <input type="file" (change)="onFileChange($event)" formControlName="file" accept=".png,.jpg">
@@ -12,9 +12,9 @@
                 </div>
                 <div class="form-unit">
                     <label for="description">Описание</label>
-                    <textarea type="text" placeholder="Описание услуги" formControlName="description"></textarea>
+                    <input type="text" placeholder="Описание услуги" formControlName="description">
                 </div>
-                <button type="submit" class="addbutton" [disabled]="form.invalid">Добавить</button>
+                <button type="submit" class="addbutton" [disabled]="form.invalid">Сохранить</button>
             </form>
         </div>
         <div class="close" (click)="closePopup()"></div>

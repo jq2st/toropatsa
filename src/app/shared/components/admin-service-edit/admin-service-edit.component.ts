@@ -9,11 +9,11 @@ import { tap, finalize } from 'rxjs/operators';
 import { ServService } from 'src/app/services/serv.service';
 
 @Component({
-  selector: 'app-admin-service-add',
-  templateUrl: './admin-service-add.component.html',
-  styleUrls: ['./admin-service-add.component.scss']
+  selector: 'app-admin-service-edit',
+  templateUrl: './admin-service-edit.component.html',
+  styleUrls: ['./admin-service-edit.component.scss']
 })
-export class AdminServiceAddComponent implements OnInit {
+export class AdminServiceEditComponent implements OnInit {
 
   isAddPopup: boolean = false
   form: FormGroup
@@ -50,7 +50,7 @@ export class AdminServiceAddComponent implements OnInit {
     }
   }
 
-  addPic() {
+  editPic() {
     let data: Pic
     let qt = Date.now();
     let stName = '/service/' + qt + '_' + this.fileToUpload.name
