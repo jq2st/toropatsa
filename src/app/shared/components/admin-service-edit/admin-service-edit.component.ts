@@ -1,11 +1,11 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Pic } from '../../interfaces/interfaces';
 import { AngularFireUploadTask, AngularFireStorage } from 'angularfire2/storage';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { UploadService } from 'src/app/services/upload.service';
-import { tap, finalize } from 'rxjs/operators';
+import { tap, finalize, map } from 'rxjs/operators';
 import { ServService } from 'src/app/services/serv.service';
 
 @Component({
@@ -18,9 +18,12 @@ export class AdminServiceEditComponent implements OnInit {
   isAddPopup: boolean = false
   form: FormGroup
   fileToUpload: File = null
+  isLoaded = false
+  qPic: Pic
 
   @Output() onClose = new EventEmitter()
-  @Output() onAdd = new EventEmitter<Pic>()
+  @Output() onEdit = new EventEmitter<Pic>()
+  @Input('qedit') qEdit 
 
   selectedFile: File = null
   fb
@@ -33,11 +36,16 @@ export class AdminServiceEditComponent implements OnInit {
   constructor(private afStorage: AngularFireStorage, private db: AngularFirestore, private serviceService: ServService, private upload: UploadService) { }
 
   ngOnInit() {
-    this.form = new FormGroup({
-      file: new FormControl('', Validators.required),
-      name: new FormControl('', Validators.required),
-      description: new FormControl('', Validators.required)
-    })
+    this.serviceService.getPicById(this.qEdit)
+      .subscribe((pic) => {
+        console.log(pic)
+        this.form = new FormGroup({
+          file: new FormControl('', Validators.required),
+          name: new FormControl(pic.name, Validators.required),
+          description: new FormControl(pic.description, Validators.required)
+        })
+        this.isLoaded = true
+      })
   }
 
   closePopup() {
@@ -61,9 +69,9 @@ export class AdminServiceEditComponent implements OnInit {
       finalize( async() =>  {
         this.url = await ref.getDownloadURL().toPromise()
         data = {name: this.form.value.name, description: this.form.value.description, photo: this.url}
-        this.serviceService.addPic(data)
-        .subscribe(item => {
-          this.onAdd.emit(item)
+        this.serviceService.editPic(this.qEdit, data)
+        .subscribe((item: Pic) => {
+          this.onEdit.emit(item)
           this.closePopup()
         })
         // this.db.collection('files').add( { downloadURL: this.downloadURL, path })

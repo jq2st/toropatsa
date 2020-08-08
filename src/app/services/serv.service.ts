@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Pic } from '../shared/interfaces/interfaces';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,24 @@ export class ServService {
           }
         })
       )
+  }
+
+  getPicById (id): Observable<Pic> {
+    return this.http.get<Pic>(this.link + 'service/' + id + '.json')
+    // .pipe(
+    //   map((resp: Pic[]) => {
+    //     return  Object
+    //       .keys(resp)
+    //       .map(key => ({
+    //         ...resp[key],
+    //         id: key
+    //       }))
+    //   })
+    // )
+  }
+
+  editPic(id, pic) {
+    return this.http.put(this.link + 'service/' + id + '.json', pic)
   }
 
   deletePic(id) {

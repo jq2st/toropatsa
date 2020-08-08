@@ -75,56 +75,14 @@
                     <div class="item__overflow">
                         <div class="img"></div>
                     </div>
-                    <span>ЗАСЕЛЕНИЕ</span>
+                    <span>Заселение</span>
                 </div>
-                <div class="item item2">
-                    <a href="service"></a>
+                <div class="item item2" *ngFor="let item of serviceItemsList">
+                    <a [routerLink]="['service']"></a>
                     <div class="item__overflow">
-                        <div class="img"></div>
+                        <div class="img" [ngStyle]="{'background-image': 'url(' + item.photo + ')'}"></div>
                     </div>
-                    <span>ПРОКАТ</span>
-                </div>
-                <div class="item item3">
-                    <a href="service#hunt"></a>
-                    <div class="item__overflow">
-                        <div class="img"></div>
-                    </div>
-                    <span>ОХОТА</span>
-                </div>
-                <div class="item item4">
-                    <a href="service#fish"></a>
-                    <div class="item__overflow">
-                        <div class="img"></div>
-                    </div>
-                    <span>РЫБАЛКА</span>
-                </div>
-                <div class="item item5">
-                    <a href="service#winter"></a>
-                    <div class="item__overflow">
-                        <div class="img"></div>
-                    </div>
-                    <span>ЗИМНИЙ ОТДЫХ</span>
-                </div>
-                <div class="item item6">
-                    <a href="service#ev"></a>
-                    <div class="item__overflow">
-                        <div class="img"></div>
-                    </div>
-                    <span>РАЗВЛЕЧЕНИЯ</span>
-                </div>
-                <div class="item item7">
-                    <a href="service#nature"></a>
-                    <div class="item__overflow">
-                        <div class="img"></div>
-                    </div>
-                    <span>ПРИРОДА</span>
-                </div>
-                <div class="item item8">
-                    <a href="service#banya"></a>
-                    <div class="item__overflow">
-                        <div class="img"></div>
-                    </div>
-                    <span>БАНЯ</span>
+                    <span>{{item.name}}</span>
                 </div>
             </div>
         </div>

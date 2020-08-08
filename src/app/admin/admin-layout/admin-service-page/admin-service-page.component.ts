@@ -8,8 +8,10 @@ import { Pic } from 'src/app/shared/interfaces/interfaces';
   styleUrls: ['./admin-service-page.component.scss']
 })
 export class AdminServicePageComponent implements OnInit {
-  
+
+  isEditPopup = false
   serviceItemsList: Pic[] = []
+  qedit: string
 
   constructor(private serviceService: ServService) { }
 
@@ -25,6 +27,21 @@ export class AdminServicePageComponent implements OnInit {
 
   addItem(event) {
     this.serviceItemsList.push(event)
+  }
+
+  editItem(id) {
+    this.isEditPopup = true
+    this.qedit = id
+  }
+
+  onEdit(event) {
+    // console.log(event)
+    this.serviceItemsList.forEach((n, i) => {
+      // console.log(n, event)
+      // if (n.name == event.name) {
+      //   this.serviceItemsList[i] = event
+      // }
+    })
   }
 
   deleteItem(id) {

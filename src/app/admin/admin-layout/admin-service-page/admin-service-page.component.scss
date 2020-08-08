@@ -56,6 +56,24 @@
         color: red;
     }
 }
+.edit-item {
+    color: green;
+    cursor: pointer; 
+    &:hover {
+        color: darkgreen;
+    }
+}
+.item-sec {
+    display: flex;
+    flex-direction: column;
+}
+.service-item__info {
+    flex: 1;
+    padding-right: 10px;
+}
+.item-sec__part {
+    height: 30px;
+}
 
 @media (max-width: 520px) {
     .service-item__pic {
@@ -76,5 +94,12 @@
     }
     .delete-item {
         margin-top: 30px;
+    }
+    .service-item__info {
+        padding-right: 0 ;
+        padding-top: 10px;
+    }
+    .item-sec {
+        margin-top: 10px;
     }
 }

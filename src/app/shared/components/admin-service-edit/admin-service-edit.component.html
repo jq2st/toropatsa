@@ -1,8 +1,8 @@
 <div class="popup-bg">
     <div class="popup">
-        <div class="pupup-inner">
+        <div class="pupup-inner" *ngIf="isLoaded">
             <h2>Редактирование услуги</h2>
-            <form [formGroup]="form" (submit)="addPic()">
+            <form [formGroup]="form" (submit)="editPic()">
                 <div class="form-unit">
                     <input type="file" (change)="onFileChange($event)" formControlName="file" accept=".png,.jpg">
                 </div>
@@ -12,7 +12,7 @@
                 </div>
                 <div class="form-unit">
                     <label for="description">Описание</label>
-                    <input type="text" placeholder="Описание услуги" formControlName="description">
+                    <textarea type="text" placeholder="Описание услуги" formControlName="description"></textarea>
                 </div>
                 <button type="submit" class="addbutton" [disabled]="form.invalid">Сохранить</button>
             </form>

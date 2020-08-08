@@ -14,8 +14,12 @@
             </div>
         </div>
         <div class="service-item__part">
-            <div class="delete-item" (click)="deleteItem(item.id)">Удалить</div>
+            <div class="item-sec">
+                <div class="edit-item item-sec__part" (click)="editItem(item.id)">Редактировать</div>
+                <div class="delete-item item-sec__part" (click)="deleteItem(item.id)">Удалить</div>
+            </div>
         </div>
     </div>
 </div>
 <app-admin-service-add *ngIf="isAddPopup" (onClose)="isAddPopup = false" (onAdd)="addItem($event)"></app-admin-service-add>
+<app-admin-service-edit *ngIf="isEditPopup" (onClose)="isEditPopup = false" (onEdit)="onEdit($event)" [qedit]="qedit"></app-admin-service-edit>
