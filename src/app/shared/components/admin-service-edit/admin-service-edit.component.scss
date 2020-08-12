@@ -11,7 +11,6 @@
 } 
 .popup {
     width: 700px;
-    height: 400px;
     overflow-y: auto;
     background-color: white;
     position: relative;
@@ -66,4 +65,21 @@
     background-size: cover;
     background-image: url('/assets/img/close_pu.svg');
     cursor: pointer;
+}
+.phototoedit {
+    height: 50px;
+    width: 100px;   
+    background-size: cover;
+    margin-right: 10px;
+}
+.fu-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media (max-width: 570px) {
+    .popup {
+        height: 90vh;
+    }
 }

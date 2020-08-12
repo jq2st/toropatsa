@@ -3,8 +3,10 @@
         <div class="pupup-inner" *ngIf="isLoaded">
             <h2>Редактирование услуги</h2>
             <form [formGroup]="form" (submit)="editPic()">
-                <div class="form-unit">
-                    <input type="file" (change)="onFileChange($event)" formControlName="file" accept=".png,.jpg">
+                <div class="form-unit fu-line">
+                    <div class="phototoedit" [ngStyle]="{'background-image': 'url(' + htmimg + ')'}"></div>
+                    <label for="editfile">Изменить фото</label>
+                    <input type="file" (change)="onFileChange($event)" formControlName="file" accept=".png,.jpg" id="editfile" style="display: none;">
                 </div>
                 <div class="form-unit">
                     <label for="description">Название</label>

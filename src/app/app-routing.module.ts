@@ -22,10 +22,10 @@ const routes: Routes = [
     {path: 'contact', component: ContactPageComponent},
   ]},
   {path: 'admin', children: [
-    {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
-    {path: 'login', component: AdminLoginPageComponent},
+    {path: '', redirectTo: '/admin/login', pathMatch: 'full'}, 
+    {path: 'login', component: AdminLoginPageComponent}, 
     {path: 'dashboard',  component: AdminLayoutComponent, canActivate: [AuthGuard], children: [
-      {path: 'galery', component: AdminGaleryPageComponent},
+      {path: 'galery', component: AdminGaleryPageComponent}, 
       {path: 'service', component: AdminServicePageComponent},
     ]}
   ]},
