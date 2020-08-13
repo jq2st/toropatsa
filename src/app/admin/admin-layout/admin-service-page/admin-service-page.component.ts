@@ -30,17 +30,17 @@ export class AdminServicePageComponent implements OnInit {
   }
 
   editItem(id) {
+    console.log('main', id, this.serviceItemsList)
     this.isEditPopup = true
     this.qedit = id
   }
 
   onEdit(event) {
-    // console.log(event)
+    console.log('xxz', event)
     this.serviceItemsList.forEach((n, i) => {
-      // console.log(n, event)
-      // if (n.name == event.name) {
-      //   this.serviceItemsList[i] = event
-      // }
+      if (n.name == event.name) {
+        this.serviceItemsList[i] = event
+      }
     })
   }
 

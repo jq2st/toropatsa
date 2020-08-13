@@ -39,22 +39,26 @@ export class ServService {
       )
   }
 
-  getPicById (id): Observable<Pic> {
+  getPicById(id): Observable<Pic> {
     return this.http.get<Pic>(this.link + 'service/' + id + '.json')
-    // .pipe(
-    //   map((resp: Pic[]) => {
-    //     return  Object
-    //       .keys(resp)
-    //       .map(key => ({
-    //         ...resp[key],
-    //         id: key
-    //       }))
-    //   })
-    // )
+    .pipe(
+      map((resp: Pic) => {
+        console.log('serv', id, resp)
+        resp.id = id
+        return resp
+      })
+    )
   }
 
   editPic(id, pic) {
     return this.http.put(this.link + 'service/' + id + '.json', pic)
+    .pipe(
+      map((resp: Pic) => {
+        console.log('serveeeeee', id, resp)
+        resp.id = id
+        return resp
+      })
+    )
   }
 
   deletePic(id) {
