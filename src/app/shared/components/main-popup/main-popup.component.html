@@ -1,0 +1,35 @@
+    <div class="connect">
+        <div class="backgroundColor"></div>
+        <div class="connect__formBG"></div>
+        <div class="connect__form">
+            <div class="connect__form__content">
+                <div class="connect__form__content__close" (click)="closepopup()"></div>
+                <h2>Связаться с нами</h2>
+                <div class="overslider">
+                    <p>С нами можно связаться по телефону:<br>+7 (916) 443 86 05</p>
+                    <p>Или оставить сообщение, заполнив форму ниже:</p>
+                    <form id="form">
+                        <div class="connect__form__content__form">
+                            <div class="content__form__parts">
+                                <div class="content__form__part">
+                                    <h3>Ваше имя</h3>
+                                    <input type="text" placeholder="Например, Алексей" name="name">
+                                </div>
+                                <div class="content__form__part">
+                                    <h3>Ваши контакты</h3>
+                                    <input type="text" placeholder="Например, 89001234567" name="phone">
+                                </div>
+                                <div class="content__form__part">
+                                    <h3>Ваше сообщение</h3>
+                                    <textarea id="" cols="30" rows="10" placeholder="Ваше сообщение" name="text"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <button class="connect__form__content__button" onclick="gtag('event', 'click', {'event_category':'thanks'});">
+                    Отправить
+                </button>
+            </div>
+        </div>	
+    </div>

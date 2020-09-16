@@ -43,7 +43,6 @@ export class ServService {
     return this.http.get<Pic>(this.link + 'service/' + id + '.json')
     .pipe(
       map((resp: Pic) => {
-        console.log('serv', id, resp)
         resp.id = id
         return resp
       })
@@ -54,7 +53,6 @@ export class ServService {
     return this.http.put(this.link + 'service/' + id + '.json', pic)
     .pipe(
       map((resp: Pic) => {
-        console.log('serveeeeee', id, resp)
         resp.id = id
         return resp
       })

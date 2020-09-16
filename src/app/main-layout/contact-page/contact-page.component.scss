@@ -28,6 +28,10 @@
 	margin-top: 5px;
 	font-family: 'GM';
 }
+.contacts__conts__right .whats::before {
+	content: url('/assets/img/whatsic.svg');
+	margin-right: 5px;
+}
 .contacts__conts__right .phone::before {
 	content: url('/assets/img/phone.svg');
 	margin-right: 5px;

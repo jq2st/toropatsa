@@ -9,6 +9,7 @@ import { ServService } from 'src/app/services/serv.service';
 })
 export class AboutPageComponent implements OnInit {
 
+  isMainPopup: boolean = false
   qitem
   serviceItemsList: Pic[] = []
 
@@ -23,4 +24,9 @@ export class AboutPageComponent implements OnInit {
       this.serviceItemsList = items
     })
   }
+
+  closeMainPopup() {
+    this.isMainPopup = false
+  }
+
 }

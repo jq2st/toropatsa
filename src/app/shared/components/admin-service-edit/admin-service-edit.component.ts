@@ -68,7 +68,6 @@ export class AdminServiceEditComponent implements OnInit {
   }
 
   editPic() {
-    console.log(this.form.value.file)
     let data: Pic
     if (this.form.value.file != '') {
       let qt = Date.now();
@@ -94,7 +93,6 @@ export class AdminServiceEditComponent implements OnInit {
     else {
       this.url = this.img
       data = {name: this.form.value.name, description: this.form.value.description, photo: this.url}
-      console.log('qe', this.qEdit)
       this.serviceService.editPic(this.qEdit, data)
       .subscribe((item: Pic) => {
         this.onEdit.emit(item)

@@ -15,6 +15,9 @@
 	font-family: 'GM';
 	font-size: 26px;
 }
+.weHave {
+	background-color: #fff;
+}
 .weHave .items {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -35,7 +38,7 @@
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	z-index: 50;
+	// z-index: 50;
 }
 .item:hover {
 	border-radius: 5px;
@@ -45,13 +48,13 @@
 }
 .item .img {
     -moz-transition: all 0.4s ease-out;
-    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
     -webkit-transition: all 0.4s ease-out;
  }
 .item:hover .img {
 	-webkit-transform: scale(1.2);
  	-moz-transform: scale(1.2);
- 	-o-transform: scale(1.2);
+ 	transform: scale(1.2);
 }
 .item__overflow {
 	width: 100%;

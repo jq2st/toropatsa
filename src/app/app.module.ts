@@ -27,6 +27,7 @@ import { environment } from 'src/environments/environment';
 import { AdminServicePageComponent } from './admin/admin-layout/admin-service-page/admin-service-page.component';
 import { AdminServiceAddComponent } from './shared/components/admin-service-add/admin-service-add.component';
 import { AdminServiceEditComponent } from './shared/components/admin-service-edit/admin-service-edit.component';
+import { MainPopupComponent } from './shared/components/main-popup/main-popup.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { AdminServiceEditComponent } from './shared/components/admin-service-edi
     AdminGaleryAddComponent,
     AdminServicePageComponent,
     AdminServiceAddComponent,
-    AdminServiceEditComponent
+    AdminServiceEditComponent,
+    MainPopupComponent
   ],
   imports: [
     BrowserModule,

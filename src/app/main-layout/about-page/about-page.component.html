@@ -1,62 +1,14 @@
+<main [ngStyle]="{'position': isMainPopup ? 'fixed' : 'relative', 'width': '100%', 'min-height': '100vh'}">
 <div class="top_menu_fake"></div>
     <div class="header">
         <div class="content">
             <h1>Торопаца</h1>
             <p>Свобода, природа, баня, рыбалка и охота. <br>Лучший отдых на озере!</p>
-            <div class="header__button">
+            <div class="header__button" (click)="isMainPopup = true">
                 Связаться с нами
             </div>
         </div>
     </div>
-    <!-- <div class="connect connect_hidden">
-        <div class="backgroundColor"></div>
-        <div class="connect__formBG"></div>
-        <div class="connect__form">
-            <div class="connect__form__content">
-                <div class="connect__form__content__close"></div>
-                <h2>Связаться с нами</h2>
-                <div class="overslider">
-                    <p>С нами можно связаться по телефону:<br>+7 (916) 443 86 05</p>
-                    <p>Или оставить сообщение, заполнив форму ниже:</p>
-                    <form id="form">
-                        <div class="connect__form__content__form">
-                            <div class="content__form__parts">
-                                <div class="content__form__part">
-                                    <h3>Ваше имя</h3>
-                                    <input type="text" placeholder="Например, Алексей" name="name">
-                                </div>
-                                <div class="content__form__part">
-                                    <h3>Ваши контакты</h3>
-                                    <input type="text" placeholder="Например, 89001234567" name="phone">
-                                </div>
-                                <div class="content__form__part">
-                                    <h3>Ваше сообщение</h3>
-                                    <textarea id="" cols="30" rows="10" placeholder="Ваше сообщение" name="text"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <button class="connect__form__content__button" onclick="gtag('event', 'click', {'event_category':'thanks'});">
-                    Отправить
-                </button>
-            </div>
-        </div>	
-    </div>
-    <div class="thanks thanks_hidden">
-        <div class="backgroundColor"></div>
-        <div class="thanks_f">
-            <div class="thanks_f__content">
-                <div class="connect__form__content__close"></div>
-                <h2>Спасибо!</h2>
-                <p>Ваше сообщение было успешно отправлено!</p>
-                <div class="thanks_f__content__button">
-                    Хорошо
-                </div>
-            </div>
-        </div>
-    </div> -->
-<main>
     <!-- <div class="offer">
         <div class="content">
             <div class="offer__content">
@@ -146,10 +98,11 @@
             </div>
         </div>
     </div>
-</main>
 <div class="h-line">
     МЫ НА КАРТЕ
 </div>
 <div class="map">
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab26097c84b0335410e889b3d5496a64c4afc7edeb43f8fecb04e47017a9443ee&amp;source=constructor" width="100%" height="330" frameborder="0"></iframe>
 </div>
+</main>
+<app-main-popup (onClose)="closeMainPopup()" *ngIf="isMainPopup"></app-main-popup>

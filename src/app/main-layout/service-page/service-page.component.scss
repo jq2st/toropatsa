@@ -139,6 +139,13 @@
 	border-radius: 50%;
 	background-position: center;
 }
+.noise {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	font-family: 'CSR';
+	font-size: 20px;
+}
 
 @media (max-width: 768px) {
 	.zaselenie__photoes__photo {
