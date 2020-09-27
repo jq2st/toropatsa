@@ -1,0 +1,10 @@
+<div class="admin-cost-title">
+    <div class="admin-page-name">
+        Цены
+    </div>
+    <div class="cost-addpic" (click)="isAddPopup = true">Добавить</div>
+</div>
+<div class="admin-cost">
+    
+</div>
+<app-admin-cost-add *ngIf="isAddPopup" (onClose)="isAddPopup = false" (onAdd)="addItem($event)"></app-admin-cost-add>

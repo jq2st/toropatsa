@@ -28,6 +28,9 @@ import { AdminServicePageComponent } from './admin/admin-layout/admin-service-pa
 import { AdminServiceAddComponent } from './shared/components/admin-service-add/admin-service-add.component';
 import { AdminServiceEditComponent } from './shared/components/admin-service-edit/admin-service-edit.component';
 import { MainPopupComponent } from './shared/components/main-popup/main-popup.component';
+import { ThanksPopupComponent } from './shared/components/thanks-popup/thanks-popup.component';
+import { AdminCostPageComponent } from './admin/admin-layout/admin-cost-page/admin-cost-page.component';
+import { AdminCostAddComponent } from './shared/components/admin-cost-add/admin-cost-add.component';
 
 
 @NgModule({
@@ -51,7 +54,10 @@ import { MainPopupComponent } from './shared/components/main-popup/main-popup.co
     AdminServicePageComponent,
     AdminServiceAddComponent,
     AdminServiceEditComponent,
-    MainPopupComponent
+    MainPopupComponent,
+    ThanksPopupComponent,
+    AdminCostPageComponent,
+    AdminCostAddComponent
   ],
   imports: [
     BrowserModule,

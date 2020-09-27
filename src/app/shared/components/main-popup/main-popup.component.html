@@ -8,26 +8,26 @@
                 <div class="overslider">
                     <p>С нами можно связаться по телефону:<br>+7 (916) 443 86 05</p>
                     <p>Или оставить сообщение, заполнив форму ниже:</p>
-                    <form id="form">
+                    <form id="form" [formGroup]="form">
                         <div class="connect__form__content__form">
                             <div class="content__form__parts">
                                 <div class="content__form__part">
                                     <h3>Ваше имя</h3>
-                                    <input type="text" placeholder="Например, Алексей" name="name">
+                                    <input type="text" placeholder="Например, Алексей" name="name" formControlName="name">
                                 </div>
                                 <div class="content__form__part">
                                     <h3>Ваши контакты</h3>
-                                    <input type="text" placeholder="Например, 89001234567" name="phone">
+                                    <input type="text" placeholder="Например, 89001234567" name="phone" formControlName="phone">
                                 </div>
                                 <div class="content__form__part">
                                     <h3>Ваше сообщение</h3>
-                                    <textarea id="" cols="30" rows="10" placeholder="Ваше сообщение" name="text"></textarea>
+                                    <textarea id="" cols="30" rows="10" placeholder="Ваше сообщение" name="text" formControlName="msg"></textarea>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
-                <button class="connect__form__content__button" onclick="gtag('event', 'click', {'event_category':'thanks'});">
+                <button class="connect__form__content__button" (click)="sendMSG()">
                     Отправить
                 </button>
             </div>

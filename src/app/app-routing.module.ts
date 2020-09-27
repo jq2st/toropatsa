@@ -11,6 +11,7 @@ import { AdminGaleryPageComponent } from './admin/admin-layout/admin-galery-page
 import { AdminLoginPageComponent } from './admin/admin-login-page/admin-login-page.component';
 import { AuthGuard } from './services/auth.guard';
 import { AdminServicePageComponent } from './admin/admin-layout/admin-service-page/admin-service-page.component';
+import { AdminCostPageComponent } from './admin/admin-layout/admin-cost-page/admin-cost-page.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path: '', redirectTo: '/admin/login', pathMatch: 'full'}, 
     {path: 'login', component: AdminLoginPageComponent}, 
     {path: 'dashboard',  component: AdminLayoutComponent, canActivate: [AuthGuard], children: [
+      {path: 'cost', component: AdminCostPageComponent}, 
       {path: 'galery', component: AdminGaleryPageComponent}, 
       {path: 'service', component: AdminServicePageComponent},
     ]}

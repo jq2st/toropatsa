@@ -10,6 +10,7 @@ import { ServService } from 'src/app/services/serv.service';
 export class AboutPageComponent implements OnInit {
 
   isMainPopup: boolean = false
+  isThanksPopup: boolean = false
   qitem
   serviceItemsList: Pic[] = []
 
@@ -27,6 +28,15 @@ export class AboutPageComponent implements OnInit {
 
   closeMainPopup() {
     this.isMainPopup = false
+  }
+
+  openThanksPopup() {
+    console.log('ghgfjgj')
+    this.isThanksPopup = true
+  }
+
+  closeThanksPopup() {
+    this.isThanksPopup = false
   }
 
 }
