@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CostService } from 'src/app/services/cost.service';
 
 @Component({
   selector: 'app-admin-cost-page',
@@ -10,9 +11,16 @@ export class AdminCostPageComponent implements OnInit {
   isAddPopup = false
   priceList
 
-  constructor() { }
+  constructor(private costService: CostService) { }
 
   ngOnInit() {
+    this.costService.getPriceList()
+      .subscribe((items) => {
+        items.map(n => {
+          
+        })
+        this.priceList = items
+      })
   }
 
 }
