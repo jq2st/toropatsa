@@ -1,1 +1,24 @@
-<p>admin-cost-add works!</p>
+<div class="popup-bg">
+    <div class="popup">
+        <div class="pupup-inner">
+            <h2>Добавить раздел</h2>
+            <form [formGroup]="form" (submit)="addDiv()">
+                <div class="form-unit">
+                    <label for="description">Название</label>
+                    <input type="text" placeholder="Название раздела" formControlName="name">
+                </div>
+                <div class="form-unit">
+                    <label for="description">Прайс-лист</label>
+                    <div class="price-list-item" *ngFor="let item of itemList">
+                        <input type="text" placeholder="Левый столбец" formControlName="description">
+                        <input type="text" placeholder="Правый столбец" formControlName="description">
+                        <input type="text" placeholder="Средний столбец" formControlName="description">
+                    </div>
+                    <div class="add-list-item" (click)="addListItem()">+ Добавить ещё 1 пункт</div>
+                </div>
+                <button type="submit" class="addbutton" [disabled]="form.invalid">Добавить</button>
+            </form>
+        </div>
+        <div class="close" (click)="closePopup()"></div>
+    </div>
+</div>

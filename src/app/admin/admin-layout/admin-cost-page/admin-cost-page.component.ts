@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminCostPageComponent implements OnInit {
 
+  isAddPopup = false
+  priceList
+
   constructor() { }
 
   ngOnInit() {
